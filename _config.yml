@@ -22,7 +22,7 @@ paginate_path:      "/posts/page:num/"
 
 # Set the Sass partials directory, as we're using @imports
 sass:
-  sass_dir: _sass
+  sass_dir: assets
   style: compressed
   
 plugins:
