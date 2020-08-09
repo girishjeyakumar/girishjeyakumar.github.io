@@ -22,7 +22,8 @@ paginate_path:      "/posts/page:num/"
 
 # Set the Sass partials directory, as we're using @imports
 sass:
-  style: :expanded # You might prefer to minify using :compressed
+  sass_dir: _sass
+  style: compressed
   
 plugins:
   - jekyll-feed
