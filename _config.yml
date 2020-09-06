@@ -12,8 +12,7 @@ facebook_username:
 instagram_username: "girishjeyakumar"
 linkedin_username: "girish-raguvir-jeyakumar-791019b7"
 
-# Add your google-analytics ID here to activate google analytics
-google_analytics:   UA-XXXXXXXXX-X # out your google-analytics code
+google_analytics:   UA-176015285-1 
 
 # Build settings
 markdown:           kramdown
