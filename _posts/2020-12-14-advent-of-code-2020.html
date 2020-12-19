@@ -3,7 +3,7 @@ layout: post
 title: "Advent of Code - Wrapping up 2020"
 subtitle: 
 date: 2020-12-15 
-lastUpdated: 2020-12-16
+lastUpdated: 2020-12-19
 background: '/img/posts/code.jpg'
 ---
 
@@ -15,7 +15,7 @@ background: '/img/posts/code.jpg'
 
 <p>It's the most wonderful time of the year!</p>
 
-<p>Thanks to Eric Wastl, I am counting my holidays down in 2020 solving programming puzzles. <a href="https://adventofcode.com/">Advent Of Code</a> is a journey of 25 two-part coding challenges, each delivered in sequence at midnight starting Dec 1<sup>st</sup> all the way to Christmas. If that's not exciting enough for you, all these challenges are connected via a intricate storyline where you save Christmas. Now who doesn't want to do that!</p>
+<p>Thanks to Eric Wastl, I am counting my holidays down in 2020 solving programming puzzles. <a href="https://adventofcode.com/" target="_blank" rel="noopener noreferrer">Advent Of Code</a> is a journey of 25 two-part coding challenges, each delivered in sequence at midnight starting Dec 1<sup>st</sup> all the way to Christmas. If that's not exciting enough for you, all these challenges are connected via a intricate storyline where you save Christmas. Now who doesn't want to do that!</p>
 
 <p>Even though this is the 6th year of this coding tradition, I just discovered it today. I know I am late even for this year but I am determined to catch up and see how far I can go.</p>
 
@@ -28,7 +28,7 @@ background: '/img/posts/code.jpg'
 <a href="#day1" data-toggle="collapse" class="underline"><h5> Day 1: Report Repair </h5></a>
 <div id = "day1" class="collapse puzzle">
     <br><span class="box">Difficulty: Easy</span> 
-    <br><br><a href="https://adventofcode.com/2020/day/2" class="underline">Problem Statement</a> 
+    <br><br><a href="https://adventofcode.com/2020/day/1" class="underline" target="_blank" rel="noopener noreferrer">Problem Statement</a> 
     <p>Given a list of integers,</p>
     <ul>
         <li>Part One requires you to find two numbers which sum upto 2020 and then return their product.</li>
@@ -40,7 +40,7 @@ background: '/img/posts/code.jpg'
 <a href="#day2" data-toggle="collapse" class="underline"><h5> Day 2: Password Philosophy </h5></a>
 <div id = "day2" class="collapse puzzle">
     <br><span class="box">Difficulty: Easy</span> 
-    <br><br><a href="https://adventofcode.com/2020/day/2" class="underline">Problem Statement</a> 
+    <br><br><a href="https://adventofcode.com/2020/day/2" class="underline" target="_blank" rel="noopener noreferrer">Problem Statement</a> 
     <p>Given a list of strings, find the number of strings which satify a given "policy".</p>
     <ul>
         <li>Part One specifies the policy as a given character count being within a given range.</li>
@@ -52,7 +52,7 @@ background: '/img/posts/code.jpg'
 <a href="#day3" data-toggle="collapse" class="underline"><h5> Day 3: Toboggan Trajectory </h5></a>
 <div id = "day3" class="collapse puzzle">
     <br><span class="box">Difficulty: Easy</span> 
-    <br><br><a href="https://adventofcode.com/2020/day/3" class="underline">Problem Statement</a> 
+    <br><br><a href="https://adventofcode.com/2020/day/3" class="underline" target="_blank" rel="noopener noreferrer">Problem Statement</a> 
     <p>Pretty straightforward array traversal with little modulo trick to handle the infinite recurrence towards the right.</p>
     <script src="https://gist.github.com/girishjeyakumar/8be93fba2c1d79d351251685533edefe.js"></script>
 </div>
@@ -60,20 +60,41 @@ background: '/img/posts/code.jpg'
 <a href="#day4" data-toggle="collapse" class="underline"><h5> Day 4: Passport Processing </h5></a>
 <div id = "day4" class="collapse puzzle">
     <br><span class="box">Difficulty: Easy</span> 
-    <br><br><a href="https://adventofcode.com/2020/day/4" class="underline">Problem Statement</a> 
+    <br><br><a href="https://adventofcode.com/2020/day/4" class="underline" target="_blank" rel="noopener noreferrer">Problem Statement</a> 
     <p>Hardly a thinker. Just a lot of careful coding to pick out "passports" (each being a dictionary key-value pairs) which have necessary keys and values that satisfy certain specified constaints.</p>
     <script src="https://gist.github.com/girishjeyakumar/7138bde1a6a598d224a60a0133a0352a.js"></script>
 </div>
 
-<a href="#day5" data-toggle="collapse" class="underline"><h5> Day 5: Custom Customs </h5></a>
+<a href="#day5" data-toggle="collapse" class="underline"><h5> Day 5: Binary Boarding </h5></a>
 <div id = "day5" class="collapse puzzle">
     <br><span class="box">Difficulty: Easy</span> 
-    <br><br><a href="https://adventofcode.com/2020/day/5" class="underline">Problem Statement</a> 
-    <p>Interesting one. The algorithm for deriving the seat id is essentially binary search and part two is a minor extension that is just a slight variation of LeetCode Easy <a href="https://leetcode.com/problems/missing-number/">Missing number</a></p>.
+    <br><br><a href="https://adventofcode.com/2020/day/5" class="underline" target="_blank" rel="noopener noreferrer">Problem Statement</a> 
+    <p>Interesting one. The algorithm for deriving the seat id is essentially binary search and part two is a minor extension that is just a slight variation of LeetCode Easy <a href="https://leetcode.com/problems/missing-number/" target="_blank" rel="noopener noreferrer">Missing number</a></p>.
     <script src="https://gist.github.com/girishjeyakumar/0128e5bdec2350d674024f3fafb91c20.js"></script>
+</div>
+
+<a href="#day6" data-toggle="collapse" class="underline"><h5> Day 6: Custom Customs </h5></a>
+<div id = "day6" class="collapse puzzle">
+    <br><span class="box">Difficulty: Easy</span> 
+    <br><br><a href="https://adventofcode.com/2020/day/6" class="underline" target="_blank" rel="noopener noreferrer">Problem Statement</a> 
+    <p>Another straightforward one.
+    <ul>
+        <li>Part one needs you to find the number of questions <b>anyone</b> has answered (logical OR).</li>
+        <li>Part two needs you to find the number of questions <b>everyone</b> has answered (logical AND).</li>
+    </ul>
+    <script src="https://gist.github.com/girishjeyakumar/cf102fdca65fda67ddb630fa0b69a77f.js"></script>
+</div>
+
+<a href="#day7" data-toggle="collapse" class="underline"><h5> Day 7: Handy Haversacks </h5></a>
+<div id = "day7" class="collapse puzzle">
+    <br><span class="box">Difficulty: Easy-Medium</span> 
+    <br><br><a href="https://adventofcode.com/2020/day/7" class="underline" target="_blank" rel="noopener noreferrer">Problem Statement</a> 
+    <p>Definitely more on the medium difficulty side. Converting the list of rules to a more code-consumable form (I chose a dictionary) is an important first part in solving this problem. I went with a recursive solution with memoization for Part One and utilized the concept of recursive grounding for Part two (or atleast that's what I think it is called). In recursive grounding you start off with set of knowns (the answer for bags which cannot contain any other color is 0) and slowly expand your "known" (or grounded) set by computing the plausible "unknowns". Part two cannot be solved if the containment structure is <a href="https://en.wikipedia.org/wiki/Topological_sorting#:~:text=In%20computer%20science%2C%20a%20topological,before%20v%20in%20the%20ordering." target="_blank" rel="noopener noreferrer">topologically</a> impossible.</p>
+    <script src="https://gist.github.com/girishjeyakumar/4d39ecb470f18c95b9e440bf8499f454.js"></script>
 </div>
 
 <hr width="60%">
 
-<p>Check back later for more. Actively catching up....</p>
+<p><b>Note</b>: I have mentioned the <a href="https://en.wikipedia.org/wiki/Big_O_notation" target="_blank" rel="noopener noreferrer">complexity</a> of my code in many cases unless it's too obvious, but they might not be tight. I have been generous in those calculations because I started to realize that these challenges don't expect the most optimal code - you can get away with some expensive code. My top priority currently is to get through the challenges within time, so disclaimer for possible sub-optimal code. However, I might to come back and re-code some solutions later for my own fun.</p>
 
+<p>Check back later for more. Actively catching up....</p>
