@@ -79,18 +79,45 @@ background: '/img/posts/code.jpg'
     <br><br><a href="https://adventofcode.com/2020/day/6" class="underline" target="_blank" rel="noopener noreferrer">Problem Statement</a> 
     <p>Another straightforward one.
     <ul>
-        <li>Part one needs you to find the number of questions <b>anyone</b> has answered (logical OR).</li>
-        <li>Part two needs you to find the number of questions <b>everyone</b> has answered (logical AND).</li>
+        <li>Part one needs you to find the number of questions <b>anyone</b> has answered yes (logical OR).</li>
+        <li>Part two needs you to find the number of questions <b>everyone</b> has answered yes (logical AND).</li>
     </ul>
     <script src="https://gist.github.com/girishjeyakumar/cf102fdca65fda67ddb630fa0b69a77f.js"></script>
 </div>
 
 <a href="#day7" data-toggle="collapse" class="underline"><h5> Day 7: Handy Haversacks </h5></a>
 <div id = "day7" class="collapse puzzle">
-    <br><span class="box">Difficulty: Easy-Medium</span> 
+    <br><span class="box">Difficulty: Medium</span> 
     <br><br><a href="https://adventofcode.com/2020/day/7" class="underline" target="_blank" rel="noopener noreferrer">Problem Statement</a> 
-    <p>Definitely more on the medium difficulty side. Converting the list of rules to a more code-consumable form (I chose a dictionary) is an important first part in solving this problem. I went with a recursive solution with memoization for Part One and utilized the concept of recursive grounding for Part two (or atleast that's what I think it is called). In recursive grounding you start off with set of knowns (the answer for bags which cannot contain any other color is 0) and slowly expand your "known" (or grounded) set by computing the plausible "unknowns". Part two cannot be solved if the containment structure is <a href="https://en.wikipedia.org/wiki/Topological_sorting#:~:text=In%20computer%20science%2C%20a%20topological,before%20v%20in%20the%20ordering." target="_blank" rel="noopener noreferrer">topologically</a> impossible.</p>
+    <p>Converting the list of rules to a more code-consumable form (I chose a dictionary) is an important first part in solving this problem. I went with a recursive solution with memoization for Part One and utilized the concept of recursive grounding for Part two (or atleast that's what I think it is called). In recursive grounding you start off with set of knowns (the answer for bags which cannot contain any other color is 0) and slowly expand your "known" (or grounded) set by computing the plausible "unknowns". Part two cannot be solved if the containment structure is <a href="https://en.wikipedia.org/wiki/Topological_sorting#:~:text=In%20computer%20science%2C%20a%20topological,before%20v%20in%20the%20ordering." target="_blank" rel="noopener noreferrer">topologically</a> impossible.</p>
     <script src="https://gist.github.com/girishjeyakumar/4d39ecb470f18c95b9e440bf8499f454.js"></script>
+</div>
+
+<a href="#day8" data-toggle="collapse" class="underline"><h5> Day 8: Handheld Halting </h5></a>
+<div id = "day8" class="collapse puzzle">
+    <br><span class="box">Difficulty: Easy-Medium</span> 
+    <br><br><a href="https://adventofcode.com/2020/day/8" class="underline" target="_blank" rel="noopener noreferrer">Problem Statement</a>
+    <p>Part one is a step-by-step mimic of code execution following the NOPs and JMPs and keeping track of the accumulator, till you hit a line you have already executed.</p>
+    <p>For part two, since it's a given that you need only one swap and input is not insanely big, I tried brute-forcing it (try every swap) and it was fast enough! There might be a more optimal way to do it, not entirely sure at this point. Onward for now!</p>
+    <script src="https://gist.github.com/girishjeyakumar/09bae3866eaf9b79d6af87ea0cd1abda.js"></script>
+</div>
+
+<a href="#day9" data-toggle="collapse" class="underline"><h5> Day 9: Encoding Error </h5></a>
+<div id = "day9" class="collapse puzzle">
+    <br><span class="box">Difficulty: Medium</span> 
+    <br><br><a href="https://adventofcode.com/2020/day/9" class="underline" target="_blank" rel="noopener noreferrer">Problem Statement</a>
+    <p>Part one - Keep track of the relevant window of sums to check against by progressively adding the entering element's sums and removing the exiting element's sums.</p>
+    <p>Part two is essentially a variation of <a href="https://leetcode.com/problems/subarray-sum-equals-k/" class="underline">LeetCode "Subarray Sum Equals K".</a></p>
+    <script src="https://gist.github.com/girishjeyakumar/56ea6968b311356ff4a72079400fcab6.js"></script>
+</div>
+
+<a href="#day10" data-toggle="collapse" class="underline"><h5> Day 10: Adapter Array </h5></a>
+<div id = "day10" class="collapse puzzle">
+    <br><span class="box">Difficulty: Medium</span> 
+    <br><br><a href="https://adventofcode.com/2020/day/10" class="underline" target="_blank" rel="noopener noreferrer">Problem Statement</a>
+    <p>Part one - Sort the array. Track the flow making sure the constraints are met and keep track of the differences. </p>
+    <p>Part two - Finally a chance to write a <a href="https://en.wikipedia.org/wiki/Dynamic_programming" class="underline">dynamic programming</a> solution!</p>
+    <script src="https://gist.github.com/girishjeyakumar/b9753836987294fa7da996dd609ffb13.js"></script>
 </div>
 
 <hr width="60%">
