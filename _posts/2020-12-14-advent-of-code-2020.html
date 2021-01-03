@@ -3,7 +3,7 @@ layout: post
 title: "Advent of Code - Wrapping up 2020"
 subtitle: 
 date: 2020-12-15 
-lastUpdated: 2021-01-02
+lastUpdated: 2020-12-25
 background: '/img/posts/code.jpg'
 ---
 
@@ -20,6 +20,10 @@ background: '/img/posts/code.jpg'
 <p>Even though this is the 6th year of this coding tradition, I just discovered it today. I know I am late even for this year but I am determined to catch up and see how far I can go.</p>
 
 <p>I am going to be documenting my progress here, but at the same time, I don't want to ruin the journey for anyone else. This is more in the spirit of knowledge sharing, encouraging some friendly competition and having fun together. I am going to keep it brief, highlight interesting observations if any and leave my code here. Let me know if you have a better or more creative solution because that's what this is all about!</p>
+
+<p><b>Note</b>: I soon started to realize that these challenges don't expect the most optimal code. So my priority became exercising my brain just enough to finish the challenges in time and enjoying the holidays. So disclaimer for possible sub-optimal code. However, I might come back and re-code some solutions later for my own fun.</p>
+
+<!-- I have mentioned the <a href="https://en.wikipedia.org/wiki/Big_O_notation" target="_blank" rel="noopener noreferrer">complexity</a> of my code in most cases unless it's too obvious or just too convoluted, but they might not be tightest or the most optimal. I have been generous in those calculations because  -->
 
 <p>Alright, here we go.</p>
 
@@ -143,8 +147,8 @@ background: '/img/posts/code.jpg'
     <br><a href="https://adventofcode.com/2020/day/13" class="underline" target="_blank" rel="noopener noreferrer">Problem Statement</a> 
     <br><br><span class="box">Difficulty: Medium-Hard</span>
     <p>Part One is straightforward.</p>
-    <p>Part Two? Fun!</p>
-    <p>I thought I could sneak through with a bruteforce solution but I just ended up watching a movie to find my program still running. Hmm and then it hit me! It is essentially a system of modulo equations. How can you solve that? Number Theory. <a href="https://crypto.stanford.edu/pbc/notes/numbertheory/crt.html">Chinese Reminder Theorem</a> and <a href="http://cs.brown.edu/courses/csci0220/static/files/notes/2-21.pdf">Modulo Inverse</a> (using Fermat's Little Theorem).</p>
+    <p>Part Two? I initially thought I will be able sneak through with a bruteforce solution, so I went to watch a movie only to come back and find my program still running :(</p>
+    <p>Then I starred at the screen and it hit me! I am looking at a system of modulo equations. How do you solve that? Number Theory - <a href="https://crypto.stanford.edu/pbc/notes/numbertheory/crt.html">Chinese Reminder Theorem</a> and <a href="http://cs.brown.edu/courses/csci0220/static/files/notes/2-21.pdf">Modulo Inverse</a> (using Fermat's Little Theorem).</p>
     <script src="https://gist.github.com/girishjeyakumar/bc973e1054afa62496d1538907d79d4c.js"></script>
 </div>
 
@@ -164,7 +168,7 @@ background: '/img/posts/code.jpg'
         <li>A 1 in the mask overrides the bit in the value.</li>
         <li>A X in the mask makes it a <a href="https://en.wikipedia.org/wiki/Schr%C3%B6dinger%27s_cat">"schrodinger"</a> bit. Can be a 0 or a 1. </li>
     </ul>
-    <p>For achieving this transformation, decompose the given mask into an AND mask, an OR mask and a collection of possible OR masks for Xs (capturing the various resolved configurations). The AND mask carries over the bits in 0 as it is and zeros out the positions that need to be overriden. The OR mask then places the ones in the appropriate zeroed out positions. The collection of OR masks for Xs can then be applied to place the resolved 0/1 (s). There would be 2<sup>Numbers of Xs</sup> possible OR masks</p>
+    <p>For achieving this transformation, decompose the given mask into an AND mask, an OR mask and a collection of possible OR masks for Xs (capturing the various resolved configurations). The AND mask carries over the bits in 0 as it is and zeros out the positions that need to be overriden. The OR mask then places the ones in the appropriate zeroed out positions. The collection of OR masks for Xs are then be applied to place the resolved 0/1 (s). There would be 2<sup>Numbers of Xs</sup> possible OR masks</p>
     <script src="https://gist.github.com/girishjeyakumar/d5f2d044bb1ecfb2b5662d96fd696633.js"></script>
 </div>
 
@@ -172,10 +176,97 @@ background: '/img/posts/code.jpg'
 <div id = "day15" class="collapse puzzle">
     <br><a href="https://adventofcode.com/2020/day/15" class="underline" target="_blank" rel="noopener noreferrer">Problem Statement</a> 
     <br><br><span class="box">Difficulty: Easy</span>
-    <p>A little breather after a couple of Medium-Hard days. Used a dictionary for the memory and just simulated the game play.</p>
+    <p>A little breather after a couple of Medium-Hard days. Used a dictionary for memory and just simulated game play.</p>
     <script src="https://gist.github.com/girishjeyakumar/940069b0860479b2ad97ac62161d07ea.js"></script>
+</div>
+
+<a href="#day16" data-toggle="collapse" class="underline"><h5> Day 16: Ticket Translation </h5></a>
+<div id = "day16" class="collapse puzzle">
+    <br><a href="https://adventofcode.com/2020/day/16" class="underline" target="_blank" rel="noopener noreferrer">Problem Statement</a> 
+    <br><br><span class="box">Difficulty: Medium-Hard</span>
+    <p>A significant part of Part One is parsing all the input and making it code-consumable. But don't worry, Part One in entirety is an investment for Part Two.</p>
+    <p>In Part One, you have to find all the invalid values. To tackle it more generically (in hindsight of Part Two), I identify all satifying contraints for a given value and report back ones which have zero satifying constaints.</p>
+    <p>For Part Two, you attempt to utilize your knowledge of these satifying constaints for each value to uniquely identify what the ticket field can be. A value satifying a contraint essentially means that the corresponding field is a potential candidate for being the right assignment. I tackle this iteratively. Values with only one potential candidate can get assigned right away. With these out of the mix, we obtain a reduce problem set. Repeat until we have uniquely identified all assignments or hit a blocker where we conclude that it is not possible.</p>
+    <script src="https://gist.github.com/girishjeyakumar/940069b0860479b2ad97ac62161d07ea.js"></script>
+</div>
+
+<a href="#day17" data-toggle="collapse" class="underline"><h5> Day 17: Conway Cubes </h5></a>
+<div id = "day17" class="collapse puzzle">
+    <br><a href="https://adventofcode.com/2020/day/17" class="underline" target="_blank" rel="noopener noreferrer">Problem Statement</a> 
+    <br><br><span class="box">Difficulty: Medium</span>
+    <p>Brute-forced it.</p>
+    <p>Can it be done more optimally? I don't know at the moment. Taking the win. Might come back later.</p>
+    <script src="https://gist.github.com/girishjeyakumar/9ed0d519f4306902c9eda8a51daba89d.js"></script>
+</div>
+
+<a href="#day18" data-toggle="collapse" class="underline"><h5> Day 18: Operation Order </h5></a>
+<div id = "day18" class="collapse puzzle">
+    <br><a href="https://adventofcode.com/2020/day/18" class="underline" target="_blank" rel="noopener noreferrer">Problem Statement</a> 
+    <br><br><span class="box">Difficulty: Easy-Medium</span>
+    <p>Infix expression evaluation - straight out of DSA 101. Enjoyed the trip down memory lane :)</p>
+    <script src="https://gist.github.com/girishjeyakumar/5e023ac722cd37f4cea1401278037e5e.js"></script>
+</div>
+
+<a href="#day19" data-toggle="collapse" class="underline"><h5> Day 19: Monster Messages </h5></a>
+<div id = "day19" class="collapse puzzle">
+    <br><a href="https://adventofcode.com/2020/day/19" class="underline" target="_blank" rel="noopener noreferrer">Problem Statement</a> 
+    <br><br><span class="box">Difficulty: Easy-Medium</span>
+    <p>Another one straight out of CS undergrad and this one is from Compilers. These rules essentially form a <a href="https://en.wikipedia.org/wiki/Formal_grammar">Formal Grammar</a>. Since the grammar doesn't have any loops you can recursively resolve the rules to pull out a regex expression for "0". After you get the regex, it's as simple as iterating through all the strings and seeing if it's a match.</p>
+    <p>Part Two attempts to jog a little bit more of your undergrad memory. Do you remember how to expand recursive rules? What regex special characters can you leverage here? Can you take advantage of your knowledge of the length of strings in the input to come up with less complex regex?</p>
+    <script src="https://gist.github.com/girishjeyakumar/a6d7d5e53f64232784e91e1ab7dce388.js"></script>
+</div>
+
+<a href="#day20" data-toggle="collapse" class="underline"><h5> Day 20: Jurassic Jigsaw </h5></a>
+<div id = "day20" class="collapse puzzle">
+    <br><a href="https://adventofcode.com/2020/day/20" class="underline" target="_blank" rel="noopener noreferrer">Problem Statement</a> 
+    <br><br><span class="box">Difficulty: Hard</span>
+    <p>Easily the most horrifying of days. </p>
+</div>
+
+<a href="#day21" data-toggle="collapse" class="underline"><h5> Day 21: Allergen Assessment </h5></a>
+<div id = "day21" class="collapse puzzle">
+    <br><a href="https://adventofcode.com/2020/day/21" class="underline" target="_blank" rel="noopener noreferrer">Problem Statement</a> 
+    <br><br><span class="box">Difficulty: Medium-Hard</span>
+    <p>Day 16, is that you again?</p>
+    <script src="https://gist.github.com/girishjeyakumar/572af251adef8acdc8d3a9da29a1f9b9.js"></script>
+</div>
+
+<a href="#day22" data-toggle="collapse" class="underline"><h5> Day 22: Crab Combat </h5></a>
+<div id = "day22" class="collapse puzzle">
+    <br><a href="https://adventofcode.com/2020/day/22" class="underline" target="_blank" rel="noopener noreferrer">Problem Statement</a> 
+    <br><br><span class="box">Difficulty: Easy-Medium</span>
+    <p>Simulated gameplay. Did nothing fancy. Taking the easy win and onward!</p>
+    <script src="https://gist.github.com/girishjeyakumar/8e3aeba716a885c0ba26f36158c36353.js"></script>
+</div>
+
+<a href="#day23" data-toggle="collapse" class="underline"><h5> Day 23: Crab Cups </h5></a>
+<div id = "day23" class="collapse puzzle">
+    <br><a href="https://adventofcode.com/2020/day/23" class="underline" target="_blank" rel="noopener noreferrer">Problem Statement</a> 
+    <br><br><span class="box">Difficulty: Medium-Hard</span>
+    <p>Another gameplay simulation. My naive first attempt worked for Part One but Part Two was not all welcoming to that (can't just skate through two consecutive days can I?).</p>
+    <p>What I needed was a more efficient data structure. Circular and list-like. Hmm. <a href="https://www.tutorialspoint.com/data_structures_algorithms/circular_linked_list_algorithm.htm#:~:text=Circular%20Linked%20List%20is%20a,into%20a%20circular%20linked%20list.">Circular Linked List!</a></p>
+    <script src="https://gist.github.com/girishjeyakumar/82cbe4e266642f4782d5c2097cef93f8.js"></script>
+</div>
+
+<a href="#day24" data-toggle="collapse" class="underline"><h5> Day 24: Lobby Layout </h5></a>
+<div id = "day24" class="collapse puzzle">
+    <br><a href="https://adventofcode.com/2020/day/24" class="underline" target="_blank" rel="noopener noreferrer">Problem Statement</a> 
+    <br><br><span class="box">Difficulty: Medium-Hard</span>
+    <p>There are various ways for you to traverse <a href="https://www.redblobgames.com/grids/hexagons/">hexagonal grids</a>. I use doubled coordinates as it made the most intuitive sense to me.</p>
+    <script src="https://gist.github.com/girishjeyakumar/5ea8479902b357e331939a69e115acf4.js"></script>
+</div>
+
+<a href="#day25" data-toggle="collapse" class="underline"><h5> Day 25: Combo Breaker </h5></a>
+<div id = "day25" class="collapse puzzle">
+    <br><a href="https://adventofcode.com/2020/day/25" class="underline" target="_blank" rel="noopener noreferrer">Problem Statement</a> 
+    <br><br><span class="box">Difficulty: Easy</span>
+    <p>I think Eric was feeling a tad generous with it being Christmas and all. Just one part and brute-force-able. Thank you very much!</p>
+    <p>Having to implement <a href="https://en.wikipedia.org/wiki/Modular_exponentiation">modular exponentiation</a> may have possibly made it a little more demanding but lucky for me, I am using python.</p>
+    <script src="https://gist.github.com/girishjeyakumar/81ed92fb4a12ff00388be36597cf0f00.js"></script>
 </div>
 
 <hr width="60%">
 
-<p><b>Note</b>: I have mentioned the <a href="https://en.wikipedia.org/wiki/Big_O_notation" target="_blank" rel="noopener noreferrer">complexity</a> of my code in most cases unless it's too obvious, but they might not be tightest or the most optimal. I have been generous in those calculations because I started to realize that these challenges don't expect the most optimal code - you can get away with some expensive code. My priority was to finish the challenges in time and enjoy the holidays - so disclaimer for possible sub-optimal code. However, I might come back and re-code some solutions later for my own fun.</p>
+<p>And done. Perfect score. Merry Christmas and happy holidays!</p>
+
+<img src="/img/posts/AdventOfCode2020_0.JPG" class="img-fluid"/>
