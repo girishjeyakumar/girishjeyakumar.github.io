@@ -3,7 +3,7 @@ layout: post
 title: "Advent of Code - Wrapping up 2020"
 subtitle: 
 date: 2020-12-15 
-lastUpdated: 2020-12-19
+lastUpdated: 2021-01-02
 background: '/img/posts/code.jpg'
 ---
 
@@ -27,8 +27,8 @@ background: '/img/posts/code.jpg'
 
 <a href="#day1" data-toggle="collapse" class="underline"><h5> Day 1: Report Repair </h5></a>
 <div id = "day1" class="collapse puzzle">
-    <br><span class="box">Difficulty: Easy</span> 
-    <br><br><a href="https://adventofcode.com/2020/day/1" class="underline" target="_blank" rel="noopener noreferrer">Problem Statement</a> 
+    <br><a href="https://adventofcode.com/2020/day/1" class="underline" target="_blank" rel="noopener noreferrer">Problem Statement</a> 
+    <br><br><span class="box">Difficulty: Easy</span> 
     <p>Given a list of integers,</p>
     <ul>
         <li>Part One requires you to find two numbers which sum upto 2020 and then return their product.</li>
@@ -39,8 +39,8 @@ background: '/img/posts/code.jpg'
 
 <a href="#day2" data-toggle="collapse" class="underline"><h5> Day 2: Password Philosophy </h5></a>
 <div id = "day2" class="collapse puzzle">
-    <br><span class="box">Difficulty: Easy</span> 
-    <br><br><a href="https://adventofcode.com/2020/day/2" class="underline" target="_blank" rel="noopener noreferrer">Problem Statement</a> 
+    <br><a href="https://adventofcode.com/2020/day/2" class="underline" target="_blank" rel="noopener noreferrer">Problem Statement</a> 
+    <br><br><span class="box">Difficulty: Easy</span> 
     <p>Given a list of strings, find the number of strings which satify a given "policy".</p>
     <ul>
         <li>Part One specifies the policy as a given character count being within a given range.</li>
@@ -51,32 +51,32 @@ background: '/img/posts/code.jpg'
 
 <a href="#day3" data-toggle="collapse" class="underline"><h5> Day 3: Toboggan Trajectory </h5></a>
 <div id = "day3" class="collapse puzzle">
-    <br><span class="box">Difficulty: Easy</span> 
-    <br><br><a href="https://adventofcode.com/2020/day/3" class="underline" target="_blank" rel="noopener noreferrer">Problem Statement</a> 
+    <br><a href="https://adventofcode.com/2020/day/3" class="underline" target="_blank" rel="noopener noreferrer">Problem Statement</a> 
+    <br><br><span class="box">Difficulty: Easy</span> 
     <p>Pretty straightforward array traversal with little modulo trick to handle the infinite recurrence towards the right.</p>
     <script src="https://gist.github.com/girishjeyakumar/8be93fba2c1d79d351251685533edefe.js"></script>
 </div>
 
 <a href="#day4" data-toggle="collapse" class="underline"><h5> Day 4: Passport Processing </h5></a>
 <div id = "day4" class="collapse puzzle">
-    <br><span class="box">Difficulty: Easy</span> 
-    <br><br><a href="https://adventofcode.com/2020/day/4" class="underline" target="_blank" rel="noopener noreferrer">Problem Statement</a> 
+    <br><a href="https://adventofcode.com/2020/day/4" class="underline" target="_blank" rel="noopener noreferrer">Problem Statement</a> 
+    <br><br><span class="box">Difficulty: Easy</span> 
     <p>Hardly a thinker. Just a lot of careful coding to pick out "passports" (each being a dictionary key-value pairs) which have necessary keys and values that satisfy certain specified constaints.</p>
     <script src="https://gist.github.com/girishjeyakumar/7138bde1a6a598d224a60a0133a0352a.js"></script>
 </div>
 
 <a href="#day5" data-toggle="collapse" class="underline"><h5> Day 5: Binary Boarding </h5></a>
 <div id = "day5" class="collapse puzzle">
-    <br><span class="box">Difficulty: Easy</span> 
-    <br><br><a href="https://adventofcode.com/2020/day/5" class="underline" target="_blank" rel="noopener noreferrer">Problem Statement</a> 
+    <br><a href="https://adventofcode.com/2020/day/5" class="underline" target="_blank" rel="noopener noreferrer">Problem Statement</a> 
+    <br><br><span class="box">Difficulty: Easy</span> 
     <p>Interesting one. The algorithm for deriving the seat id is essentially binary search and part two is a minor extension that is just a slight variation of LeetCode Easy <a href="https://leetcode.com/problems/missing-number/" target="_blank" rel="noopener noreferrer">Missing number</a></p>.
     <script src="https://gist.github.com/girishjeyakumar/0128e5bdec2350d674024f3fafb91c20.js"></script>
 </div>
 
 <a href="#day6" data-toggle="collapse" class="underline"><h5> Day 6: Custom Customs </h5></a>
 <div id = "day6" class="collapse puzzle">
-    <br><span class="box">Difficulty: Easy</span> 
-    <br><br><a href="https://adventofcode.com/2020/day/6" class="underline" target="_blank" rel="noopener noreferrer">Problem Statement</a> 
+    <br><a href="https://adventofcode.com/2020/day/6" class="underline" target="_blank" rel="noopener noreferrer">Problem Statement</a> 
+    <br><br><span class="box">Difficulty: Easy</span> 
     <p>Another straightforward one.
     <ul>
         <li>Part one needs you to find the number of questions <b>anyone</b> has answered yes (logical OR).</li>
@@ -87,16 +87,16 @@ background: '/img/posts/code.jpg'
 
 <a href="#day7" data-toggle="collapse" class="underline"><h5> Day 7: Handy Haversacks </h5></a>
 <div id = "day7" class="collapse puzzle">
-    <br><span class="box">Difficulty: Medium</span> 
-    <br><br><a href="https://adventofcode.com/2020/day/7" class="underline" target="_blank" rel="noopener noreferrer">Problem Statement</a> 
+    <br><a href="https://adventofcode.com/2020/day/7" class="underline" target="_blank" rel="noopener noreferrer">Problem Statement</a>
+    <br><br><span class="box">Difficulty: Medium</span>  
     <p>Converting the list of rules to a more code-consumable form (I chose a dictionary) is an important first part in solving this problem. I went with a recursive solution with memoization for Part One and utilized the concept of recursive grounding for Part two (or atleast that's what I think it is called). In recursive grounding you start off with set of knowns (the answer for bags which cannot contain any other color is 0) and slowly expand your "known" (or grounded) set by computing the plausible "unknowns". Part two cannot be solved if the containment structure is <a href="https://en.wikipedia.org/wiki/Topological_sorting#:~:text=In%20computer%20science%2C%20a%20topological,before%20v%20in%20the%20ordering." target="_blank" rel="noopener noreferrer">topologically</a> impossible.</p>
     <script src="https://gist.github.com/girishjeyakumar/4d39ecb470f18c95b9e440bf8499f454.js"></script>
 </div>
 
 <a href="#day8" data-toggle="collapse" class="underline"><h5> Day 8: Handheld Halting </h5></a>
 <div id = "day8" class="collapse puzzle">
-    <br><span class="box">Difficulty: Easy-Medium</span> 
-    <br><br><a href="https://adventofcode.com/2020/day/8" class="underline" target="_blank" rel="noopener noreferrer">Problem Statement</a>
+    <br><a href="https://adventofcode.com/2020/day/8" class="underline" target="_blank" rel="noopener noreferrer">Problem Statement</a>
+    <br><br><span class="box">Difficulty: Easy-Medium</span> 
     <p>Part one is a step-by-step mimic of code execution following the NOPs and JMPs and keeping track of the accumulator, till you hit a line you have already executed.</p>
     <p>For part two, since it's a given that you need only one swap and input is not insanely big, I tried brute-forcing it (try every swap) and it was fast enough! There might be a more optimal way to do it, not entirely sure at this point. Onward for now!</p>
     <script src="https://gist.github.com/girishjeyakumar/09bae3866eaf9b79d6af87ea0cd1abda.js"></script>
@@ -104,8 +104,8 @@ background: '/img/posts/code.jpg'
 
 <a href="#day9" data-toggle="collapse" class="underline"><h5> Day 9: Encoding Error </h5></a>
 <div id = "day9" class="collapse puzzle">
-    <br><span class="box">Difficulty: Medium</span> 
-    <br><br><a href="https://adventofcode.com/2020/day/9" class="underline" target="_blank" rel="noopener noreferrer">Problem Statement</a>
+    <br><a href="https://adventofcode.com/2020/day/9" class="underline" target="_blank" rel="noopener noreferrer">Problem Statement</a>
+    <br><br><span class="box">Difficulty: Medium</span> 
     <p>Part one - Keep track of the relevant window of sums to check against by progressively adding the entering element's sums and removing the exiting element's sums.</p>
     <p>Part two is essentially a variation of <a href="https://leetcode.com/problems/subarray-sum-equals-k/" class="underline">LeetCode "Subarray Sum Equals K".</a></p>
     <script src="https://gist.github.com/girishjeyakumar/56ea6968b311356ff4a72079400fcab6.js"></script>
@@ -113,15 +113,69 @@ background: '/img/posts/code.jpg'
 
 <a href="#day10" data-toggle="collapse" class="underline"><h5> Day 10: Adapter Array </h5></a>
 <div id = "day10" class="collapse puzzle">
-    <br><span class="box">Difficulty: Medium</span> 
-    <br><br><a href="https://adventofcode.com/2020/day/10" class="underline" target="_blank" rel="noopener noreferrer">Problem Statement</a>
+    <br><a href="https://adventofcode.com/2020/day/10" class="underline" target="_blank" rel="noopener noreferrer">Problem Statement</a>
+    <br><br><span class="box">Difficulty: Medium</span> 
     <p>Part one - Sort the array. Track the flow making sure the constraints are met and keep track of the differences. </p>
     <p>Part two - Finally a chance to write a <a href="https://en.wikipedia.org/wiki/Dynamic_programming" class="underline">dynamic programming</a> solution!</p>
     <script src="https://gist.github.com/girishjeyakumar/b9753836987294fa7da996dd609ffb13.js"></script>
 </div>
 
+<a href="#day11" data-toggle="collapse" class="underline"><h5> Day 11: Seating System </h5></a>
+<div id = "day11" class="collapse puzzle">
+    <br><a href="https://adventofcode.com/2020/day/11" class="underline" target="_blank" rel="noopener noreferrer">Problem Statement</a>
+    <br><br><span class="box">Difficulty: Medium</span>
+    <p>The crux of the logic for this problem is in finding the neighbours. Once that's implemented, to compute the next state, all you have to do is iterate through each cell, identify it's neighbourhood occupancy and accordingly update it's own occupancy. Keep iterating from one state to the next till it stabilizes. I am using <a href="https://www.programiz.com/python-programming/shallow-deep-copy">deepcopy</a> to make a copy of the current state as occupancy changes are done simulataneously and also due to how assignment works in python.</p>
+    <script src="https://gist.github.com/girishjeyakumar/5783b0c84aacda2e1cd728bb16ed4894.js"></script>
+</div>
+
+<a href="#day12" data-toggle="collapse" class="underline"><h5> Day 12: Rain Risk </h5></a>
+<div id = "day12" class="collapse puzzle">
+    <br><a href="https://adventofcode.com/2020/day/12" class="underline" target="_blank" rel="noopener noreferrer">Problem Statement</a> 
+    <br><br><span class="box">Difficulty: Medium</span>
+    <p>This is all you need to know to solve Day 12.</p>
+    <p><b>Note:</b> Non-90 degree angle rotations would make this problem much more difficult.</p>
+    <img src="/img/posts/rotations.JPG" class="img-fluid">
+    <script src="https://gist.github.com/girishjeyakumar/17d9c9c0ddec3c384edd9a72cb594e0a.js"></script>
+</div>
+
+<a href="#day13" data-toggle="collapse" class="underline"><h5> Day 13: Shuttle Search </h5></a>
+<div id = "day13" class="collapse puzzle">
+    <br><a href="https://adventofcode.com/2020/day/13" class="underline" target="_blank" rel="noopener noreferrer">Problem Statement</a> 
+    <br><br><span class="box">Difficulty: Medium-Hard</span>
+    <p>Part One is straightforward.</p>
+    <p>Part Two? Fun!</p>
+    <p>I thought I could sneak through with a bruteforce solution but I just ended up watching a movie to find my program still running. Hmm and then it hit me! It is essentially a system of modulo equations. How can you solve that? Number Theory. <a href="https://crypto.stanford.edu/pbc/notes/numbertheory/crt.html">Chinese Reminder Theorem</a> and <a href="http://cs.brown.edu/courses/csci0220/static/files/notes/2-21.pdf">Modulo Inverse</a> (using Fermat's Little Theorem).</p>
+    <script src="https://gist.github.com/girishjeyakumar/bc973e1054afa62496d1538907d79d4c.js"></script>
+</div>
+
+<a href="#day14" data-toggle="collapse" class="underline"><h5> Day 14: Docking Data </h5></a>
+<div id = "day14" class="collapse puzzle">
+    <br><a href="https://adventofcode.com/2020/day/14" class="underline" target="_blank" rel="noopener noreferrer">Problem Statement</a> 
+    <br><br><span class="box">Difficulty: Medium-Hard</span>
+    <p>Part One</p>
+    <ul>
+        <li>A 0 or 1 in the mask overrides the corresponding bit in value.</li>
+        <li>A X in the mask leaves the bit unchanged in the value.</li>
+    </ul>
+    <p>For achieving this transformation, decompose the given mask into an AND mask and an OR mask to be applied one after the other. The AND mask carries over the bits in X as it is and zeros out the positions that need to be overriden. The OR mask then places the appropriate 0/1 (s) in the zeroed out positions.</p>
+    <p>Part Two</p>
+    <ul>
+        <li>A 0 in the mask leaves the bit unchanged in the value.</li>
+        <li>A 1 in the mask overrides the bit in the value.</li>
+        <li>A X in the mask makes it a <a href="https://en.wikipedia.org/wiki/Schr%C3%B6dinger%27s_cat">"schrodinger"</a> bit. Can be a 0 or a 1. </li>
+    </ul>
+    <p>For achieving this transformation, decompose the given mask into an AND mask, an OR mask and a collection of possible OR masks for Xs (capturing the various resolved configurations). The AND mask carries over the bits in 0 as it is and zeros out the positions that need to be overriden. The OR mask then places the ones in the appropriate zeroed out positions. The collection of OR masks for Xs can then be applied to place the resolved 0/1 (s). There would be 2<sup>Numbers of Xs</sup> possible OR masks</p>
+    <script src="https://gist.github.com/girishjeyakumar/d5f2d044bb1ecfb2b5662d96fd696633.js"></script>
+</div>
+
+<a href="#day15" data-toggle="collapse" class="underline"><h5> Day 15: Rambunctious Recitation </h5></a>
+<div id = "day15" class="collapse puzzle">
+    <br><a href="https://adventofcode.com/2020/day/15" class="underline" target="_blank" rel="noopener noreferrer">Problem Statement</a> 
+    <br><br><span class="box">Difficulty: Easy</span>
+    <p>A little breather after a couple of Medium-Hard days. Used a dictionary for the memory and just simulated the game play.</p>
+    <script src="https://gist.github.com/girishjeyakumar/940069b0860479b2ad97ac62161d07ea.js"></script>
+</div>
+
 <hr width="60%">
 
-<p><b>Note</b>: I have mentioned the <a href="https://en.wikipedia.org/wiki/Big_O_notation" target="_blank" rel="noopener noreferrer">complexity</a> of my code in most cases unless it's too obvious, but they might not be tightest or the most optimal. I have been generous in those calculations because I started to realize that these challenges don't expect the most optimal code - you can get away with some expensive code. My priority currently is to get through the challenges within time, so disclaimer for possible sub-optimal code. However, I might to come back and re-code some solutions later for my own fun.</p>
-
-<p>Check back later for more. Actively catching up....</p>
+<p><b>Note</b>: I have mentioned the <a href="https://en.wikipedia.org/wiki/Big_O_notation" target="_blank" rel="noopener noreferrer">complexity</a> of my code in most cases unless it's too obvious, but they might not be tightest or the most optimal. I have been generous in those calculations because I started to realize that these challenges don't expect the most optimal code - you can get away with some expensive code. My priority was to finish the challenges in time and enjoy the holidays - so disclaimer for possible sub-optimal code. However, I might come back and re-code some solutions later for my own fun.</p>
