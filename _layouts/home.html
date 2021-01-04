@@ -51,8 +51,9 @@ layout: default
             {{ site.author }}
             {% endif %}
             on
-            {{ post.date | date: '%b %d, %Y' }} &middot; Last Updated {{ post.lastUpdated | date: '%b %d, %Y' }}
-            <!-- {% include read_time.html content=page.content %} -->
+            {{ post.date | date: '%b %d, %Y' }} &middot; 
+            <!-- Last Updated {{ post.lastUpdated | date: '%b %d, %Y' }} -->
+            {% include read_time.html content=post.content %}
           </p>
         </article>
 
