@@ -1,5 +1,4 @@
 title:              GJ
-email:              girishraguvir@gmail.com
 description:        Welcome to my website!
 author:             Girish Jeyakumar
 baseurl:            ""
@@ -9,7 +8,6 @@ url:                "https://girishjeyakumar.github.io"
 twitter_username:   
 github_username: "girishjeyakumar"
 facebook_username:  
-instagram_username: "girishjeyakumar"
 linkedin_username: "girishjeyakumar"
 
 google_analytics:   UA-176015285-1 
